@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
 
           {/* Quick links */}
           <div>
-            <h4 className="text-lg font-bold mb-6">{t('footer.quickLinks')}</h4>
+            <h3 className="text-lg font-bold mb-6">{t('footer.quickLinks')}</h3>
             <ul className="space-y-3">
               {navLinks.map((link) => (
                 <li key={link.key}>
@@ -105,7 +105,7 @@ const Footer: React.FC = () => {
 
           {/* Contact info */}
           <div>
-            <h4 className="text-lg font-bold mb-6">{t('footer.contact')}</h4>
+            <h3 className="text-lg font-bold mb-6">{t('footer.contact')}</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 mt-0.5 text-primary" />
@@ -130,10 +130,12 @@ const Footer: React.FC = () => {
         {/* Email Subscription */}
         <div className="mt-12 pt-8 border-t border-background/10">
           <div className="max-w-xl mx-auto text-center">
-            <h4 className="text-lg font-bold mb-4">{t('footer.subscribe.title')}</h4>
+            <h3 className="text-lg font-bold mb-4">{t('footer.subscribe.title')}</h3>
             <form onSubmit={handleSubscribe} className="flex gap-2 mb-3">
               <Input
                 type="email"
+                id="footer-email"
+                aria-label="Email address"
                 placeholder={t('footer.subscribe.placeholder')}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}

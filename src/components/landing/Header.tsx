@@ -87,12 +87,15 @@ const Header: React.FC = () => {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-navigation"
               className="md:hidden p-2 ml-2 rounded-lg hover:bg-secondary transition-colors"
             >
               {isMenuOpen ? (
-                <X className="w-6 h-6" />
+                <X className="w-6 h-6" aria-hidden="true" />
               ) : (
-                <Menu className="w-6 h-6" />
+                <Menu className="w-6 h-6" aria-hidden="true" />
               )}
             </button>
           </div>
@@ -100,7 +103,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav aria-label="Mobile navigation" className="md:hidden py-4 border-t border-border/30 animate-fade-in">
+          <nav id="mobile-navigation" aria-label="Mobile navigation" className="md:hidden py-4 border-t border-border/30 animate-fade-in">
             <div className="flex flex-col gap-2">
               {navItems.map((item) => (
                 <a
