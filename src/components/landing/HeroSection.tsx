@@ -73,6 +73,8 @@ const HeroSection: React.FC = () => {
             <img
               src={activeImage.src}
               alt={activeImage.alt}
+              width={1350}
+              height={1080}
               className="w-full h-auto max-h-[70vh] 2xl:max-h-[80vh] object-contain p-8 md:p-12 lg:p-16 2xl:p-20"
               loading="eager"
               fetchPriority={isInitialSlide ? 'high' : 'auto'}
@@ -102,6 +104,8 @@ const HeroSection: React.FC = () => {
                 <img
                   src={activeImage.src}
                   alt={activeImage.alt}
+                  width={1350}
+                  height={1080}
                   className="w-full h-full object-contain p-4"
                   loading="eager"
                   fetchPriority={isInitialSlide ? 'high' : 'auto'}
