@@ -144,14 +144,15 @@ const HeroSection: React.FC = () => {
               </span>
             </div>
 
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-6xl font-bold leading-tight mb-2 2xl:mb-4 3xl:mb-6 animate-fade-in text-foreground" style={{ animationDelay: '0.1s' }}>
-              {t('hero.title')}
+            <h1 className="animate-fade-in text-foreground mb-4 md:mb-6 2xl:mb-8 3xl:mb-10" style={{ animationDelay: '0.1s' }}>
+              <span className="block text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-6xl font-bold leading-tight mb-2 2xl:mb-4 3xl:mb-6">
+                {t('hero.title')}
+              </span>
+              <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl font-bold text-primary">
+                {t('hero.brand')}
+                <span className="text-base sm:text-lg md:text-xl 2xl:text-2xl 3xl:text-3xl align-super">®</span>
+              </span>
             </h1>
-            
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-8xl font-bold mb-4 md:mb-6 2xl:mb-8 3xl:mb-10 animate-fade-in text-primary" style={{ animationDelay: '0.15s' }}>
-              {t('hero.brand')}
-              <span className="text-base sm:text-lg md:text-xl 2xl:text-2xl 3xl:text-3xl align-super">®</span>
-            </h2>
 
             <p className="text-xs sm:text-sm md:text-base 2xl:text-lg 3xl:text-xl text-muted-foreground mb-6 md:mb-8 2xl:mb-10 3xl:mb-12 animate-fade-in text-balance leading-relaxed 2xl:max-w-xl 3xl:max-w-2xl" style={{ animationDelay: '0.2s' }}>
               {t('hero.subtitle')}

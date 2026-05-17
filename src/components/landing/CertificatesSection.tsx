@@ -145,7 +145,7 @@ const CertificatesSection: React.FC = () => {
               >
                 <img
                   src={selectedCertificate}
-                  alt="Certificate"
+                  alt="Ferfer® quality certificate"
                   className="max-w-full max-h-[calc(85vh-80px)] object-contain rounded-lg pointer-events-none"
                   onContextMenu={handleContextMenu}
                   onDragStart={(e) => e.preventDefault()}
