@@ -12,10 +12,10 @@ interface LanguageContextType {
 const translations: Record<Language, Record<string, string>> = {
   ru: {
     // Meta
-    'meta.title': 'Ферфер® — Биологически активная добавка с микрокапсулированным железом | Узбекистан',
-    'meta.description': 'Ферфер® — инновационная БАД с липосомальным железом 14 мг, витамином C 80 мг и B₁₂ 2,5 мкг. Высокая биодоступность, без побочных эффектов, приятный апельсиновый вкус. 30 саше в упаковке. Купить в аптеках Узбекистана.',
-    'meta.ogTitle': 'Ферфер® — Биологически активная добавка с микрокапсулированным железом',
-    'meta.ogDescription': 'Инновационная БАД с липосомальным железом 14 мг, витамином C и B₁₂. Высокая биодоступность, без побочных эффектов. Купить в аптеках Узбекистана.',
+    'meta.title': 'Ферфер® — БАД с липосомальным железом | Узбекистан',
+    'meta.description': 'Ферфер® — БАД с липосомальным железом 14 мг, витаминами C и B₁₂. Высокая биодоступность, без побочных эффектов. 30 саше в аптеках Узбекистана.',
+    'meta.ogTitle': 'Ферфер® — БАД с липосомальным железом',
+    'meta.ogDescription': 'БАД с липосомальным железом 14 мг, витаминами C и B₁₂. Высокая биодоступность, без побочных эффектов. 30 саше — в аптеках Узбекистана.',
 
     // Navigation
     'nav.home': 'Главная',
@@ -157,10 +157,10 @@ const translations: Record<Language, Record<string, string>> = {
   },
   uz: {
     // Meta
-    'meta.title': "Ferfer® — Mikrokapsulalangan temirga ega biologik faol qo'shimcha | O'zbekiston",
-    'meta.description': "Ferfer® — 14 mg liposomal temir, 80 mg vitamin C va 2,5 mkg B₁₂ vitaminiga ega innovatsion biologik faol qo'shimcha. Yuqori biokiraolishlik, nojo'ya ta'sirlarsiz, yoqimli apelsin ta'mi. Qadoqda 30 ta sashe. O'zbekiston dorixonalarida.",
-    'meta.ogTitle': "Ferfer® — Mikrokapsulalangan temirga ega biologik faol qo'shimcha",
-    'meta.ogDescription': "Innovatsion biologik faol qo'shimcha: 14 mg liposomal temir, vitamin C va B₁₂. Yuqori biokiraolishlik, nojo'ya ta'sirlarsiz. O'zbekiston dorixonalarida.",
+    'meta.title': "Ferfer® — Liposomal temirli BFQ | O'zbekiston",
+    'meta.description': "Ferfer® — 14 mg liposomal temir, vitamin C va B₁₂ bilan BFQ. Yuqori biokiraolishlik, nojo'ya ta'sirlarsiz. 30 sashe O'zbekiston dorixonalarida.",
+    'meta.ogTitle': "Ferfer® — Liposomal temirli BFQ",
+    'meta.ogDescription': "14 mg liposomal temir, vitamin C va B₁₂ bilan BFQ. Yuqori biokiraolishlik, nojo'ya ta'sirlarsiz. 30 sashe — O'zbekiston dorixonalarida.",
 
     // Navigation
     'nav.home': 'Bosh sahifa',

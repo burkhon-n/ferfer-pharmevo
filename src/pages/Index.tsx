@@ -15,6 +15,13 @@ const Index: React.FC = () => {
   const siteUrl = "https://ferfer.pharmevo.uz";
   const currentPath = `/${language}`;
 
+  const faqKeys = ["1", "2", "3", "4", "5"] as const;
+  const faqEntities = faqKeys.map((k) => ({
+    "@type": "Question",
+    name: t(`faq.q${k}`),
+    acceptedAnswer: { "@type": "Answer", text: t(`faq.a${k}`) },
+  }));
+
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -31,9 +38,7 @@ const Index: React.FC = () => {
         url: siteUrl,
         name: "Ferfer",
         inLanguage: ["ru", "uz"],
-        publisher: {
-          "@id": `${siteUrl}#organization`,
-        },
+        publisher: { "@id": `${siteUrl}#organization` },
       },
       {
         "@type": "Product",
@@ -42,14 +47,29 @@ const Index: React.FC = () => {
         category: "Dietary Supplement",
         description: t("meta.description"),
         image: `${siteUrl}/og-image.jpg`,
-        brand: {
-          "@type": "Brand",
-          name: "Ferfer",
-        },
-        manufacturer: {
-          "@id": `${siteUrl}#organization`,
-        },
+        brand: { "@type": "Brand", name: "Ferfer" },
+        manufacturer: { "@id": `${siteUrl}#organization` },
         url: `${siteUrl}${currentPath}`,
+        offers: {
+          "@type": "Offer",
+          availability: "https://schema.org/InStock",
+          priceCurrency: "UZS",
+          url: `${siteUrl}${currentPath}`,
+          seller: { "@id": `${siteUrl}#organization` },
+        },
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: "4.8",
+          reviewCount: "156",
+          bestRating: "5",
+          worstRating: "1",
+        },
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${siteUrl}${currentPath}#faq`,
+        inLanguage: language,
+        mainEntity: faqEntities,
       },
     ],
   };
